@@ -24,6 +24,7 @@
           if (xmlhttp.readyState == 4 ) {
             if(xmlhttp.status == 200){
               var json = JSON.parse(xmlhttp.responseText);
+              console.dir(json)
               
               Object.keys(json.all).forEach(function(v){
                 var row = document.createElement('tr');
