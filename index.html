@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Available Node.js Releases</title>
+  </head>
+  <body>
+    The following is a complete list of Node.js releases available for <a href="http://github.com/coreybutler/nvm-windows" target="_blank">NVM for Windows</a>
+    (and possibly other Node.js version managers). The <a href="https://raw.githubusercontent.com/coreybutler/nodedistro/master/nodeversions.json">raw data is available</a>.
+    <hr>
+    <table id="versions">
+      <tr><th>Node Version</th><th>NPM Version</th></tr>
+    </table>
+    <script>
+      function loadData() {
+        var xmlhttp,
+          t = document.getelementById('versions');
+          
+        if (window.XMLHttpRequest) {
+          xmlhttp = new XMLHttpRequest();
+        } else {
+          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+    
+        xmlhttp.onreadystatechange = function() {
+          if (xmlhttp.readyState == 4 ) {
+            if(xmlhttp.status == 200){
+              var json = JSON.parse(xmlhttp.responseText);
+              
+              Object.keys(json.all).forEach(function(v){
+                var row = document.createElement('tr');
+                var node = document.createElement('td');
+                var npm = document.createElement('td');
+                
+                node.appendchild(document.createTextNode(v));
+                npm.appendchild(document.createTextNode(json.all[v]));
+                
+                row.appendChild(node);
+                row.appendChild(npm);
+                t.appendChild(row);
+              });
+              
+            } else if(xmlhttp.status == 400) {
+              alert('There was an error 400')
+            } else {
+              alert('something else other than 200 was returned')
+            }
+          }
+        }
+    
+        xmlhttp.open("GET", "ajax_info.txt", true);
+        xmlhttp.send();
+      }
+    </script>
+  </body>
+</html>
