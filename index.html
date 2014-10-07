@@ -19,21 +19,24 @@
         text-decoration: none;
         font-weight: bold;
       }
-      table > tr > th{
+      table > tr > th {
         background-color: #232323;
         color: #efefef;
       }
       
-      table > tr > th,
-      table > tr > td {
-        border: 1px solid #ccc;
+      td, th {
+        padding: 2px;
+      }
+      table > tr {
+        border-bottom: 1px solid #ccc;
       }
     </style>
   </head>
   <body>
+    <p>
     The following is a complete list of Node.js releases available for <a href="http://github.com/coreybutler/nvm-windows" target="_blank">NVM for Windows</a>
     (and possibly other Node.js version managers). The <a href="https://raw.githubusercontent.com/coreybutler/nodedistro/master/nodeversions.json">raw data is available</a>.
-    <hr>
+    </p>
     <table id="versions">
       <tr><th>Node Version</th><th>NPM Version</th></tr>
     </table>
