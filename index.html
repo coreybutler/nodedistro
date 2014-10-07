@@ -10,7 +10,7 @@
       <tr><th>Node Version</th><th>NPM Version</th></tr>
     </table>
     <script>
-      function loadData() {
+      //function loadData() {
         var xmlhttp,
           t = document.getElementById('versions');
           
@@ -48,9 +48,9 @@
     
         xmlhttp.open("GET", "https://raw.githubusercontent.com/coreybutler/nodedistro/master/nodeversions.json", true);
         xmlhttp.send();
-      }
+      //}
       
-      loadData();
+      //loadData();
     </script>
   </body>
 </html>
