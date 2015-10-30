@@ -1,4 +1,5 @@
 **UPDATE: 10/30/2015**
+
 The script has been rewritten to support the new release process (i.e. supporting Node v4.0.0+).
 
 # Node.js Version Distribution List
