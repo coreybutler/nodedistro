@@ -1,3 +1,9 @@
+## DEPRECATED!
+
+Use https://nodejs.org/download/release/index.json instead.
+
+This list will no longer receive updates, but I will still merge PR's. This was originally created because [NVM For Windows](https://github.com/coreybutler/nvm-windows) needed a list of releases, but there was no official data feed at that time. Now that the Node Foundation publishes an official feed, nodedistro is no longer necessary. NVM For Windows `1.1.0` is the last version to use nodedistro. Version 1.1.1+ will use the official feed.
+
 **UPDATE: 10/30/2015**
 
 The script has been rewritten to support the new release process (i.e. supporting Node v4.0.0+).
